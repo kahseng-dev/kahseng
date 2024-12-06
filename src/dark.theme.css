@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+:root {
+	--font-0: "Geist Mono"; /* default font. */
+	
+	--bg-0: oklch(17.76% 0 0); /* main background color. */
+
+	--text-0: oklch(100% 0 0); /* default text color. */
+	--text-1: oklch(53.82% 0 0); /* muted text color. */
+
+	--border-0: oklch(28.5% 0 0); /* default border color. */
+}
+
