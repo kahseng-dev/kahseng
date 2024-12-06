@@ -1,13 +1,15 @@
 export type Project = {
 	title: string,
+	date_published: Date,
 	description: string,
 	link: string
 }
 
 const projects: Project[] = [
 	{
-		title: "kahseng.dev",
-		description: "personal website",
-		link: "https://kahseng.dev"
+		title: "example 1",
+		date_published: new Date(2024, 12, 6),
+		description: "placeholder",
+		link: "/"
 	}
 ]
