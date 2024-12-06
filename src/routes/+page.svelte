@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>kahseng</title>
+</svelte:head>
+
 <header class="flex justify-between text-center">
 	<h1>hello! i'm kahseng</h1>
 	<span class="text-[0.6rem]">kahseng.chew@protonmail.com</span>
