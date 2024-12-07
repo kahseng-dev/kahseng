@@ -1,10 +1,4 @@
-export type Tech = {
-	name: string,
-	category: string,
-	iconURL?: string
-}
-
-export const techstack: Tech[] = [
+export const techstack = [
 	{
 		name: "react",
 		category: "web dev"
@@ -14,7 +8,7 @@ export const techstack: Tech[] = [
 		category: "web dev"
 	},
 	{
-		name: "html",
+		name: "html5",
 		category: "web dev"
 	},
 	{
@@ -62,15 +56,16 @@ export const techstack: Tech[] = [
 		category: "database"
 	},
 	{
-		name: "pocketbase",
+		name: "pocket-base",
 		category: "database"
 	},
 	{
 		name: "arudino",
-		category: "internet of things"
+		category: "internet of things",
+		iconURL: "https://www.arduino.cc/favicon.ico"
 	},
 	{
-		name: "raspberry pi",
+		name: "raspberry_pi",
 		category: "internet of things"
 	},
 	{

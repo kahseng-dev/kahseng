@@ -1,3 +1,8 @@
+<script>
+	import Time from 'svelte-time';
+	let { data } = $props();
+</script>
+
 <svelte:head>
 	<title>kahseng</title>
 </svelte:head>
@@ -20,27 +25,37 @@
 	<h1 class="py-2 text-muted">tech stack</h1>
 </div>
 <section>
-	<article class="py-1 border-t flex justify-between">
-		<p>web dev</p>
-	</article>
-	<article class="py-1 border-t flex justify-between">
-		<p>mobile dev</p>
-	</article>
-	<article class="py-1 border-t flex justify-between">
-		<p>database</p>
-	</article>
-	<article class="py-1 border-t flex justify-between">
-		<p>microcontrollers</p>
-	</article>
-	<article class="py-1 border-t flex justify-between">
-		<p>tools</p>
-	</article>
+	{#each data.uniqueTechCategories as category}
+		<article class="py-1 border-t flex justify-between">
+			<p class="w-1/2">{category}</p>
+			<p class="w-1/2 flex gap-2">
+				{#each data.techstack as tech}
+					{#if tech.category === category}
+						<img
+							class="size-6 disable-drag"
+							src="https://svgl.app/library/{tech.name}.svg"
+							onerror={(event) => {
+								const target = event.target;
+								if (target instanceof HTMLImageElement) {
+									target.src = tech.iconURL || 'icons/exclamation-circle.svg';
+								}
+							}}
+							alt={tech.name}
+						/>
+					{/if}
+				{/each}
+			</p>
+		</article>
+	{/each}
 </section>
 <div class="mt-4">
 	<h1 class="py-2 text-muted">projects</h1>
 </div>
 <section>
-	<article class="py-1 border-t flex justify-between">
-		<p>example 1</p>
-	</article>
+	{#each data.projects as { title, date_published }}
+		<article class="py-1 border-t flex justify-between">
+			<span>{title}</span>
+			<Time class="text-muted" timestamp={date_published} format="MMM D, YYYY" />
+		</article>
+	{/each}
 </section>
