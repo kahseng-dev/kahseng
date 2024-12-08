@@ -16,10 +16,13 @@
 		<container class="flex justify-between">
 			<h1>hello! i'm kahseng</h1>
 			<Popover.Root>
-				<Popover.Trigger class="text-[0.6rem]" onclick={() => navigator.clipboard.writeText(email)}>
+				<Popover.Trigger
+					class="flex cursor-pointer text-[0.6rem] rounded px-1 transition-colors duration-200 hover:bg-[var(--bg-1)]"
+					onclick={() => navigator.clipboard.writeText(email)}
+				>
 					{email}
 				</Popover.Trigger>
-				<Popover.Content class="select-none border p-1.5 text-[0.5rem]" side="top">
+				<Popover.Content class="select-none border p-1.5 text-[0.5rem]" side="top" sideOffset={4}>
 					<Popover.Arrow class="rounded-[2px] border-l border-t" />
 					copied to clipboard!
 				</Popover.Content>
@@ -60,7 +63,7 @@
 										/>
 									</div>
 								</Tooltip.Trigger>
-								<Tooltip.Content sideOffset={4} class="select-none border p-1.5 text-[0.5rem]">
+								<Tooltip.Content class="select-none border p-1.5 text-[0.5rem]" sideOffset={4}>
 									<Tooltip.Arrow class="rounded-[2px] border-l border-t" />
 									{tech.name}
 								</Tooltip.Content>
