@@ -16,14 +16,12 @@
 		<container class="flex justify-between">
 			<h1>hello! i'm kahseng</h1>
 			<Popover.Root>
-				<Popover.Trigger>
-					<button class="text-[0.6rem]" onclick={() => navigator.clipboard.writeText(email)}>
-						{email}
-					</button>
+				<Popover.Trigger class="text-[0.6rem]" onclick={() => navigator.clipboard.writeText(email)}>
+					{email}
 				</Popover.Trigger>
-				<Popover.Content side="top" transitionConfig={{ y: 8, duration: 150 }} sideOffset={8}>
-					<Popover.Arrow class="rounded-[2px] border-l border-t border-dark-10" />
-					<div class="flex border border-dark-10 p-1.5 text-[0.5rem]">copied to clipboard!</div>
+				<Popover.Content class="select-none border p-1.5 text-[0.5rem]" side="top">
+					<Popover.Arrow class="rounded-[2px] border-l border-t" />
+					copied to clipboard!
 				</Popover.Content>
 			</Popover.Root>
 		</container>
@@ -60,13 +58,9 @@
 										alt={tech.name}
 									/>
 								</Tooltip.Trigger>
-								<Tooltip.Content transitionConfig={{ y: 10, duration: 150 }}>
-									<Tooltip.Arrow class="rounded-[2px] border-l border-t border-dark-10" />
-									<div
-										class="select-none flex items-center justify-center rounded-input border border-dark-10 p-1.5 text-[0.5rem]"
-									>
-										{tech.name}
-									</div>
+								<Tooltip.Content sideOffset={4} class="select-none border p-1.5 text-[0.5rem]">
+									<Tooltip.Arrow class="rounded-[2px] border-l border-t" />
+									{tech.name}
 								</Tooltip.Content>
 							</Tooltip.Root>
 						{/if}

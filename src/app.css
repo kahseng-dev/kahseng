@@ -2,7 +2,7 @@
 	font-family: var(--font-0);
 	background-color: var(--bg-0);
 	color: var(--text-0);
-	border-color: var(--border-0);
+	border-color: var(--border-0) !important;
 }
 
 .text-muted {
