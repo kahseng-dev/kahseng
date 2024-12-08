@@ -4,6 +4,7 @@
 	--font-0: "Geist Mono"; /* default font. */
 	
 	--bg-0: oklch(17.76% 0 0); /* main background color. */
+	--bg-1: oklch(28.5% 0 0); /* hovered background color. */
 
 	--text-0: oklch(100% 0 0); /* default text color. */
 	--text-1: oklch(53.82% 0 0); /* muted text color. */

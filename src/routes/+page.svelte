@@ -41,22 +41,24 @@
 		{#each data.uniqueTechCategories as category}
 			<article class="py-2 border-t flex justify-between">
 				<p class="w-1/2">{category}</p>
-				<p class="w-1/2 flex gap-4">
+				<p class="w-1/2 flex flex-wrap gap-2">
 					{#each data.techstack as tech}
 						{#if tech.category === category}
 							<Tooltip.Root openDelay={0}>
 								<Tooltip.Trigger>
-									<img
-										class="cursor-default disable-drag size-6"
-										src="https://svgl.app/library/{tech.name}.svg"
-										onerror={(event) => {
-											const target = event.target;
-											if (target instanceof HTMLImageElement) {
-												target.src = tech.iconURL || 'icons/x.svg';
-											}
-										}}
-										alt={tech.name}
-									/>
+									<div class="p-2 rounded border transition-colors duration-200 hover:bg-[--bg-1]">
+										<img
+											class="disable-drag size-6 bg-transparent"
+											src="https://svgl.app/library/{tech.name}.svg"
+											onerror={(event) => {
+												const target = event.target;
+												if (target instanceof HTMLImageElement) {
+													target.src = tech.iconURL || 'icons/x.svg';
+												}
+											}}
+											alt={tech.name}
+										/>
+									</div>
 								</Tooltip.Trigger>
 								<Tooltip.Content sideOffset={4} class="select-none border p-1.5 text-[0.5rem]">
 									<Tooltip.Arrow class="rounded-[2px] border-l border-t" />
