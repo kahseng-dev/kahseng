@@ -1,6 +1,6 @@
 <script>
 	import Time from 'svelte-time';
-	import { Popover } from 'bits-ui';
+	import { Popover, Tooltip } from 'bits-ui';
 
 	let { data } = $props();
 
@@ -41,22 +41,34 @@
 	<section>
 		<h2 class="mt-4 py-2 text-muted">tech stack</h2>
 		{#each data.uniqueTechCategories as category}
-			<article class="py-1 border-t flex justify-between">
+			<article class="py-2 border-t flex justify-between">
 				<p class="w-1/2">{category}</p>
-				<p class="w-1/2 flex gap-2">
+				<p class="w-1/2 flex gap-4">
 					{#each data.techstack as tech}
 						{#if tech.category === category}
-							<img
-								class="size-6 disable-drag"
-								src="https://svgl.app/library/{tech.name}.svg"
-								onerror={(event) => {
-									const target = event.target;
-									if (target instanceof HTMLImageElement) {
-										target.src = tech.iconURL || 'icons/x.svg';
-									}
-								}}
-								alt={tech.name}
-							/>
+							<Tooltip.Root openDelay={0}>
+								<Tooltip.Trigger>
+									<img
+										class="cursor-default disable-drag size-6"
+										src="https://svgl.app/library/{tech.name}.svg"
+										onerror={(event) => {
+											const target = event.target;
+											if (target instanceof HTMLImageElement) {
+												target.src = tech.iconURL || 'icons/x.svg';
+											}
+										}}
+										alt={tech.name}
+									/>
+								</Tooltip.Trigger>
+								<Tooltip.Content transitionConfig={{ y: 10, duration: 150 }}>
+									<Tooltip.Arrow class="rounded-[2px] border-l border-t border-dark-10" />
+									<div
+										class="select-none flex items-center justify-center rounded-input border border-dark-10 p-1.5 text-[0.5rem]"
+									>
+										{tech.name}
+									</div>
+								</Tooltip.Content>
+							</Tooltip.Root>
 						{/if}
 					{/each}
 				</p>
