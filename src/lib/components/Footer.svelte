@@ -3,7 +3,7 @@
 		<img class="mr-1 size-3" src="logos/linkedin.svg" alt="linkedin" />linkedin
 	</a>
 	<a class="flex items-center" target="_blank" href="https://read.cv/kahseng">
-		<i class="mr-1 text-xs iconoir-page"></i>resume
+		<img class="mr-1 size-3" src="icons/page.svg" alt="resume" />resume
 	</a>
 	<a class="flex items-center" target="_blank" href="https://github.com/kahseng-dev">
 		<img class="mr-1 size-3" src="logos/github.svg" alt="github" />github

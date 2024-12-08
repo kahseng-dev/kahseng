@@ -52,7 +52,7 @@
 								onerror={(event) => {
 									const target = event.target;
 									if (target instanceof HTMLImageElement) {
-										target.src = tech.iconURL || 'icons/exclamation-circle.svg';
+										target.src = tech.iconURL || 'icons/x.svg';
 									}
 								}}
 								alt={tech.name}
