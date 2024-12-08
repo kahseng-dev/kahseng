@@ -1,6 +1,10 @@
 <script>
 	import Time from 'svelte-time';
+	import { Popover } from 'bits-ui';
+
 	let { data } = $props();
+
+	const email = 'kahseng.chew@protonmail.com';
 </script>
 
 <svelte:head>
@@ -11,7 +15,17 @@
 	<header>
 		<container class="flex justify-between">
 			<h1>hello! i'm kahseng</h1>
-			<span class="text-[0.6rem]">kahseng.chew@protonmail.com</span>
+			<Popover.Root>
+				<Popover.Trigger>
+					<button class="text-[0.6rem]" onclick={() => navigator.clipboard.writeText(email)}>
+						{email}
+					</button>
+				</Popover.Trigger>
+				<Popover.Content side="top" transitionConfig={{ y: 8, duration: 150 }} sideOffset={8}>
+					<Popover.Arrow class="rounded-[2px] border-l border-t border-dark-10" />
+					<div class="flex border border-dark-10 p-1.5 text-[0.5rem]">copied to clipboard!</div>
+				</Popover.Content>
+			</Popover.Root>
 		</container>
 		<p class="text-muted">mobile and full-stack web developer</p>
 	</header>
