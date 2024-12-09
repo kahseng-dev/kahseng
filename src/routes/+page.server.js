@@ -4,7 +4,7 @@ import { techstack } from './techstack.js';
 export function load() {
 	return {
 		projects: projects.map((project) => ({
-			title: project.title,
+			slug: project.slug,
 			date_published: project.date_published,
 			content: project.content
 		})),

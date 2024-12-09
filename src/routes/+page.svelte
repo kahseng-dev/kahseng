@@ -75,10 +75,22 @@
 		{/each}
 	</section>
 	<section>
-		<h2 class="mt-4 py-2 text-muted">projects</h2>
-		{#each data.projects as { title, date_published }}
+		<h2>
+			<a class="flex items-center mt-4 py-2 text-muted" href="/projects">
+				projects
+				<svg class="size-3 ml-1 mt-px" viewBox="0 0 24 24">
+					<path
+						class="stroke-[--text-1] stroke-2"
+						d="M3 12L21 12M21 12L12.5 3.5M21 12L12.5 20.5"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+			</a>
+		</h2>
+		{#each data.projects as { slug, date_published }}
 			<article class="py-1 border-t flex justify-between">
-				<span>{title}</span>
+				<a href="/projects/{slug}">{slug}</a>
 				<Time class="text-muted" timestamp={date_published} format="MMM D, YYYY" />
 			</article>
 		{/each}
