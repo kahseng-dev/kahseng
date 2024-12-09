@@ -17,7 +17,7 @@
 			<h1>hello! i'm kahseng</h1>
 			<Popover.Root>
 				<Popover.Trigger
-					class="flex cursor-pointer text-[0.6rem] rounded px-1 transition-colors duration-200 hover:bg-[var(--bg-1)]"
+					class="flex cursor-pointer text-tiny rounded px-1 transition-colors duration-200 hover:bg-[var(--bg-1)]"
 					onclick={() => navigator.clipboard.writeText(email)}
 				>
 					{email}

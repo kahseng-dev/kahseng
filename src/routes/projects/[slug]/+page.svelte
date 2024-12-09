@@ -5,7 +5,7 @@
 </script>
 
 <main>
-	<nav class="flex items-center text-[0.6rem]">
+	<nav class="flex items-center text-tiny">
 		<a class="text-muted" href="/">home</a>
 		<svg class="size-3 mx-1 fill-none" viewBox="0 0 24 24">
 			<path
@@ -28,7 +28,7 @@
 	</nav>
 	<header>
 		<h1 class="mt-4">{data.project.slug}</h1>
-		<span class="text-muted text-[0.6rem]">
+		<span class="text-muted text-tiny">
 			Published on
 			<Time class="text-muted" timestamp={data.project.date_published} format="MMM D, YYYY" />
 		</span>

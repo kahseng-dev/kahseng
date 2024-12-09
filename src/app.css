@@ -5,6 +5,11 @@
 	border-color: var(--border-0) !important;
 }
 
+.text-tiny {
+	font-size: 0.6rem;
+	line-height: 1rem;
+}
+
 .text-muted {
 	color: var(--text-1);
 }

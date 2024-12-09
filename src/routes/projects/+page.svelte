@@ -9,7 +9,7 @@
 </svelte:head>
 
 <main>
-	<nav class="flex items-center text-[0.6rem]">
+	<nav class="flex items-center text-tiny">
 		<a class="text-muted" href="/">home</a>
 		<svg class="size-3 mx-1 fill-none" viewBox="0 0 24 24">
 			<path
