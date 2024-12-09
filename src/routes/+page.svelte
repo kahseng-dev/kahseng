@@ -48,20 +48,20 @@
 					{#each data.techstack as tech}
 						{#if tech.category === category}
 							<Tooltip.Root openDelay={0}>
-								<Tooltip.Trigger>
-									<div class="p-2 rounded border transition-colors duration-200 hover:bg-[--bg-1]">
-										<img
-											class="disable-drag size-6 bg-transparent"
-											src="https://svgl.app/library/{tech.name}.svg"
-											onerror={(event) => {
-												const target = event.target;
-												if (target instanceof HTMLImageElement) {
-													target.src = tech.iconURL || 'icons/x.svg';
-												}
-											}}
-											alt={tech.name}
-										/>
-									</div>
+								<Tooltip.Trigger
+									class="p-2 rounded border transition-colors duration-200 hover:bg-[--bg-1]"
+								>
+									<img
+										class="disable-drag size-6 bg-transparent"
+										src="https://svgl.app/library/{tech.name}.svg"
+										onerror={(event) => {
+											const target = event.target;
+											if (target instanceof HTMLImageElement) {
+												target.src = tech.iconURL || 'icons/x.svg';
+											}
+										}}
+										alt={tech.name}
+									/>
 								</Tooltip.Trigger>
 								<Tooltip.Content class="select-none border p-1.5 text-[0.5rem]" sideOffset={4}>
 									<Tooltip.Arrow class="rounded-[2px] border-l border-t" />
