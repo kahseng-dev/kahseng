@@ -1,5 +1,5 @@
-import { projects } from './projects.js';
-import { techstack } from './techstack.js';
+import { projects } from '$data/projects.js';
+import { techstack } from '$data/techstack.js';
 
 export function load() {
 	return {
