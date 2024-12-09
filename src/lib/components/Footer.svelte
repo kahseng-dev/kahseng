@@ -1,4 +1,4 @@
-<footer class="flex border-t mt-4 pt-2 gap-4 text-[0.6rem] text-center">
+<footer class="flex border-t mt-4 pt-2 gap-4 text-tiny text-center">
 	<a class="flex items-center" target="_blank" href="https://www.linkedin.com/in/kahseng">
 		<img class="mr-1 size-3" src="logos/linkedin.svg" alt="linkedin" />linkedin
 	</a>
