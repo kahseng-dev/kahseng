@@ -1,6 +1,7 @@
 <script>
 	import Time from 'svelte-time';
 	import { Popover, Tooltip } from 'bits-ui';
+	import Footer from '$components/Footer.svelte';
 
 	let { data } = $props();
 
@@ -95,4 +96,5 @@
 			</article>
 		{/each}
 	</section>
+	<Footer />
 </main>
