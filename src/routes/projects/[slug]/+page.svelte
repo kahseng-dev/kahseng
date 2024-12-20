@@ -32,6 +32,30 @@
 			Published on
 			<Time class="text-muted" timestamp={data.project.date_published} format="MMM D, YYYY" />
 		</span>
-		<p class="mt-4">{data.project.content}</p>
 	</header>
+	<section>
+		<p class="mt-4">{data.project.content}</p>
+	</section>
+	{#if data.previousProjectSlug || data.nextProjectSlug}
+		<section class="flex border-t mt-4 pt-2 gap-2">
+			{#if data.previousProjectSlug}
+				<a
+					class="flex flex-col w-1/2 rounded p-2 transition duration-200 hover:bg-[--bg-1]"
+					href="/projects/{data.previousProjectSlug}"
+				>
+					<span class="mb-1 text-muted bg-transparent">previous</span>
+					<span class="text-tiny bg-transparent">{data.previousProjectSlug}</span>
+				</a>
+			{/if}
+			{#if data.nextProjectSlug}
+				<a
+					class="flex flex-col w-1/2 rounded p-2 transition duration-200 hover:bg-[--bg-1]"
+					href="/projects/{data.nextProjectSlug}"
+				>
+					<span class="mb-1 text-muted bg-transparent">next</span>
+					<span class="text-tiny bg-transparent">{data.nextProjectSlug}</span>
+				</a>
+			{/if}
+		</section>
+	{/if}
 </main>
