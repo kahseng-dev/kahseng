@@ -90,7 +90,7 @@
 			</a>
 		</h2>
 		{#each data.projects as { slug, date_published }}
-			<article class="py-1 border-t flex justify-between">
+			<article class="py-2 border-t flex justify-between">
 				<a href="/projects/{slug}">{slug}</a>
 				<Time class="text-muted" timestamp={date_published} format="MMM D, YYYY" />
 			</article>
