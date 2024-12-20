@@ -26,15 +26,15 @@
 		</svg>
 		<span class="text-muted">{data.project.slug}</span>
 	</nav>
-	<header>
-		<h1 class="mt-4">{data.project.slug}</h1>
+	<header class="mt-4 flex flex-col">
+		<h1>{data.project.slug}</h1>
 		<span class="text-muted text-tiny">
 			Published on
 			<Time class="text-muted" timestamp={data.project.date_published} format="MMM D, YYYY" />
 		</span>
 	</header>
-	<section>
-		<p class="mt-4">{data.project.content}</p>
+	<section class="mt-4">
+		<p>{data.project.content}</p>
 	</section>
 	{#if data.previousProjectSlug || data.nextProjectSlug}
 		<section class="flex border-t mt-4 pt-2 gap-2">

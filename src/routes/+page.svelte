@@ -14,11 +14,11 @@
 
 <main>
 	<header>
-		<container class="flex justify-between">
+		<container class="flex flex-col justify-between md:flex-row">
 			<h1>hello! i'm kahseng</h1>
 			<Popover.Root>
 				<Popover.Trigger
-					class="flex cursor-pointer text-tiny rounded px-1 transition-colors duration-200 hover:bg-[var(--bg-1)]"
+					class="flex cursor-pointer text-tiny rounded transition-colors duration-200 hover:bg-[var(--bg-1)] md:px-1"
 					onclick={() => navigator.clipboard.writeText(email)}
 				>
 					{email}
