@@ -2,6 +2,8 @@
 
 :root {
 	--font-0: "Geist Mono"; /* default font. */
+
+	--icon-0: oklch(100% 0 0); /* default icon color. */
 	
 	--bg-0: oklch(17.76% 0 0); /* main background color. */
 	--bg-1: oklch(28.5% 0 0); /* hovered background color. */

@@ -3,6 +3,8 @@
 :root {
 	--font-0: "Geist Mono"; /* default font. */
 	
+	--icon-0: oklch(48.17% 0.2054 261.34); /* default icon color. */
+
 	--bg-0: oklch(92.8% 0.006 264.531); /* main background color. */
 	--bg-1: oklab(0.882 -0.0161359 -0.0567506 / 0.8); /* hovered background color. */
 
