@@ -1,22 +1,24 @@
+@font-face {
+    font-family: "Geist Mono", serif;
+    src: url("/fonts/GeistMono.woff2");
+}
+
+:root {
+    --font-mono: "Geist Mono", serif;
+}
+
 * {
-	font-family: var(--font-0), "Courier New", Courier, monospace;
-	background-color: var(--bg-0);
-	color: var(--text-0);
-	border-color: var(--border-0) !important;
-}
-
-.text-tiny {
-	font-size: 0.6rem;
-	line-height: 1rem;
-}
-
-.text-muted {
-	color: var(--text-1);
+	font-family: var(--font-mono), ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+	text-rendering: optimizeLegibility;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
 }
 
 .disable-drag {
-	-webkit-user-drag: none;
-	-khtml-user-drag: none;
-	-moz-user-drag: none;
-	-o-user-drag: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
