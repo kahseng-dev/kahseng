@@ -9,14 +9,21 @@
     function handleHover() {
         isVisible = !isVisible;
     }
+
+    function handleLeave() {
+        isVisible = false;
+    }
 </script>
 
 <button 
     onfocus={handleHover}
-    onmouseover={handleHover} 
-    onmouseout={handleHover}
+    onmouseenter={handleHover}
     onblur={handleHover}
-    class="border border-(--border-0) hover:bg-(--bg-1) rounded p-1 relative"
+    onmouseover={handleHover}
+    onmouseout={handleLeave}
+    onmouseleave={handleLeave}
+    disabled
+    class="relative border border-(--border-0) rounded p-1 transition hover:bg-(--bg-1)"
     >
     {#if isVisible}
         <span class="z-10 absolute bottom-11 left-0 whitespace-nowrap border border-(--border-0) text-[0.65rem] rounded bg-(--bg-0) px-1.5 py-0.5">{tooltipText}</span>
