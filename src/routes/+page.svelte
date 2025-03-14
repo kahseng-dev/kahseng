@@ -23,7 +23,7 @@
 			<span>hello! i'm kahseng</span>
 			<Toast text={email} toastText="copied to clipboard" onclick={() => copyToClipboard(email)} />
 		</div>
-		<p>mobile and full-stack web developer</p>
+		<p class="text-muted">mobile and full-stack web developer</p>
 	</div>
 	<p>
 		i'm a developer who works on both frontend and backend, i love focusing on user experience,
@@ -33,7 +33,7 @@
 		are not just visually appealing but also highly functional.
 	</p>
 	<div class="flex flex-col gap-2">
-		<p>tech stack</p>
+		<p class="text-muted">tech stack</p>
 		<hr/>
 		{#each uniqueTechStackCategory as category, index}
 			<div class="flex justify-between">
@@ -53,7 +53,7 @@
 	</div>
 	<div class="flex flex-col gap-2">
 		<a href="/projects">
-			<span class="flex items-center gap-2">
+			<span class="flex items-center gap-2 text-muted">
 				projects
 				<i class="ph ph-arrow-right"></i>
 			</span>
@@ -63,9 +63,8 @@
 			<a href="/projects/{slug}" class="flex justify-between">
 				<span class="flex items-center gap-2">
 					{slug}
-					<i class="ph ph-arrow-right"></i>
 				</span>
-				<Time date={date_published}/>
+				<Time class="text-muted" date={date_published}/>
 			</a>
 			{#if index != projects.length - 1}
 				<hr/>

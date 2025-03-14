@@ -10,12 +10,13 @@
 
 <div class="flex flex-col gap-4">
 	<Breadcrumbs/>
-	<p>projects</p>
 	<div class="flex flex-col gap-2">
+		<p class="text-muted">projects</p>
+		<hr/>
 		{#each projects as project, index}
 			<div class="flex justify-between">
 				<a href="/projects/{project.slug}">{project.slug}</a>
-				<Time date={project.date_published}/>
+				<Time class="text-muted" date={project.date_published}/>
 			</div>
 			{#if index != projects.length - 1}
 				<hr/>
