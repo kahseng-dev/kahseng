@@ -1,38 +1,30 @@
-# sv
+# kahseng personal website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+> hello! this is my personal website repo
 
-## Creating a project
+<img alt="svelte" src="https://img.shields.io/badge/svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=fff"/> <img alt="typescript" src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=fff"/> <img alt="tailwindcss" src="https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=fff"/> <img alt="bun" src="https://img.shields.io/badge/bun-000?style=for-the-badge&logo=bun&logoColor=fff"/>
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Install
 
-```bash
-# create a new project in the current directory
-npx sv create
+Install dependencies with `bun install`
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Development
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start a development server:
 
 ```bash
-npm run dev
+bun run dev
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun run dev -- --open
 ```
 
 ## Building
 
-To create a production version of your app:
+To create a production version of the webpage:
 
 ```bash
-npm run build
+bun run build
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Preview the production build with `bun run preview`.
