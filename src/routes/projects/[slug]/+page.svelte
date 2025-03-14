@@ -1,61 +1,33 @@
 <script>
-	import Time from 'svelte-time';
+	import { page } from '$app/stores';
+	import { projects } from "$lib/data/projects";
+	import Breadcrumbs from "$components/Breadcrumbs.svelte";
+	import Time from "$components/Time.svelte";
 
-	let { data } = $props();
+	let slug = $page.params.slug;
+	let data = $state(projects.find((project) => project.slug === slug));
+	let dataIndex = $state(projects.map((project) => project.slug).indexOf(slug));
 </script>
 
-<main>
-	<nav class="flex items-center text-tiny">
-		<a class="text-muted" href="/">home</a>
-		<svg class="size-3 mx-1 fill-none" viewBox="0 0 24 24">
-			<path
-				class="stroke-[--text-1] stroke-1"
-				d="M9 6L15 12L9 18"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-		</svg>
-		<a class="text-muted" href="/projects">projects</a>
-		<svg class="size-3 mx-1 fill-none" viewBox="0 0 24 24">
-			<path
-				class="stroke-[--text-1] stroke-1"
-				d="M9 6L15 12L9 18"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-		</svg>
-		<span class="text-muted">{data.project.slug}</span>
-	</nav>
-	<header class="mt-4 flex flex-col">
-		<h1>{data.project.slug}</h1>
-		<span class="text-muted text-tiny">
-			Published on
-			<Time class="text-muted" timestamp={data.project.date_published} format="MMM D, YYYY" />
-		</span>
-	</header>
-	<section class="mt-4">
-		<p>{data.project.content}</p>
-	</section>
-	{#if data.previousProjectSlug || data.nextProjectSlug}
-		<section class="flex border-t mt-4 pt-2 gap-2">
-			{#if data.previousProjectSlug}
-				<a
-					class="flex flex-col w-1/2 rounded p-2 transition duration-200 hover:bg-[--bg-1]"
-					href="/projects/{data.previousProjectSlug}"
-				>
-					<span class="mb-1 text-muted bg-transparent">previous</span>
-					<span class="text-tiny bg-transparent">{data.previousProjectSlug}</span>
-				</a>
-			{/if}
-			{#if data.nextProjectSlug}
-				<a
-					class="flex flex-col w-1/2 rounded p-2 transition duration-200 hover:bg-[--bg-1]"
-					href="/projects/{data.nextProjectSlug}"
-				>
-					<span class="mb-1 text-muted bg-transparent">next</span>
-					<span class="text-tiny bg-transparent">{data.nextProjectSlug}</span>
-				</a>
-			{/if}
-		</section>
-	{/if}
-</main>
+<div class="flex flex-col gap-4">
+	<Breadcrumbs/>
+	<span>
+		published on
+		<Time date={data?.date_published}/>
+	</span>
+	<p>{data?.content}</p>
+	<div class="mt-12 grid grid-cols-2 gap-2">
+		{#if projects[dataIndex - 1] != undefined}
+			<a target="_self" href="/projects/{projects[dataIndex - 1]?.slug}" class="flex flex-col border border-(--border-0) rounded p-4">
+				<span class="text-xs">last project</span>
+				<span>{projects[dataIndex - 1]?.slug}</span>
+			</a>
+		{/if}
+		{#if projects[dataIndex + 1] != undefined}
+			<a target="_self" href="/projects/{projects[dataIndex + 1]?.slug}" class="col-start-2 flex flex-col border border-(--border-0) rounded p-4">
+				<span class="text-xs">next project</span>
+				<span>{projects[dataIndex + 1]?.slug}</span>
+			</a>
+		{/if}
+	</div>
+</div>
