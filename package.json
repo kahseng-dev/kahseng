@@ -22,5 +22,9 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check ."
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@tailwindcss/vite": "^4.0.14",
+		"tailwindcss": "^4.0.14"
+	}
 }
