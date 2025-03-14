@@ -1,33 +1,25 @@
 <script lang="ts">
-	import Time from 'svelte-time';
-
-	let { data } = $props();
+	import { projects } from "$lib/data/projects";
+	import Breadcrumbs from "$components/Breadcrumbs.svelte";
+	import Time from "$components/Time.svelte";
 </script>
 
 <svelte:head>
 	<title>projects</title>
 </svelte:head>
 
-<main>
-	<nav class="flex items-center text-tiny">
-		<a class="text-muted" href="/">home</a>
-		<svg class="size-3 mx-1 fill-none" viewBox="0 0 24 24">
-			<path
-				class="stroke-[--text-1] stroke-1"
-				d="M9 6L15 12L9 18"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-		</svg>
-		<span class="text-muted">projects</span>
-	</nav>
-	<section>
-		<h2 class="mt-4 pb-2 text-muted">projects</h2>
-		{#each data.projects as { slug, date_published }}
-			<article class="py-2 border-t flex justify-between">
-				<a href="/projects/{slug}">{slug}</a>
-				<Time class="text-muted" timestamp={date_published} format="MMM D, YYYY" />
-			</article>
+<div class="flex flex-col gap-4">
+	<Breadcrumbs/>
+	<p>projects</p>
+	<div class="flex flex-col gap-2">
+		{#each projects as project, index}
+			<div class="flex justify-between">
+				<a href="/projects/{project.slug}">{project.slug}</a>
+				<Time date={project.date_published}/>
+			</div>
+			{#if index != projects.length - 1}
+				<hr/>
+			{/if}
 		{/each}
-	</section>
-</main>
+	</div>
+</div>
