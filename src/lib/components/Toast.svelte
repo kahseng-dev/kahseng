@@ -19,14 +19,14 @@
 </script>
 
 <button
-    class="relative cursor-pointer rounded px-2 transition hover:bg-white/10 text-[0.65rem]"
+    class="relative cursor-pointer rounded px-2 transition text-[0.65rem] hover:bg-(--bg-1)"
     {...rest}
     onclick={() => handleClick()}
     >
     {#if isVisible}
         <div 
             transition:fade
-            class="absolute bottom-7 left-6 inline text-[0.65rem] rounded bg-white/15 px-2 py-0.5"
+            class="absolute bottom-7 left-6 inline text-[0.65rem] rounded px-2 py-0.5 bg-(--bg-1)"
             >
             {toastText}
         </div>
