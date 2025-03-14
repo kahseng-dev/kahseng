@@ -8,6 +8,10 @@
     --border-0: oklch(28.5% 0 0); /* default border color. */
 }
 
+.text-muted {
+	color: var(--text-1);
+}
+
 hr {
     border-color: var(--border-0); /* default border color. */
 }
