@@ -3,33 +3,24 @@
 
     let { 
         text,
-        toastText,
-        onclick,
         ...rest
     } = $props();
 
     let isVisible = $state(false);
 
-    export function handleClick() {
+    export function showToast(duration:number = 1000) {
         isVisible = true;
         setTimeout(() => {
             isVisible = false;
-        }, 1000);
+        }, duration);
     }
 </script>
 
-<button
-    class="relative cursor-pointer rounded px-2 transition text-[0.65rem] hover:bg-(--bg-1)"
-    {...rest}
-    onclick={() => handleClick()}
-    >
-    {#if isVisible}
-        <div 
-            transition:fade
-            class="absolute bottom-7 left-6 inline text-[0.65rem] rounded px-2 py-0.5 bg-(--bg-1)"
-            >
-            {toastText}
-        </div>
-    {/if}
-    {text}
-</button>
+{#if isVisible}
+    <div
+        transition:fade
+        class="absolute bottom-6 left-6.5 text-[0.65rem] rounded px-2 py-0.5 bg-(--bg-1)">
+        {text}
+    </div>
+{/if}
+

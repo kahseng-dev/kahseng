@@ -7,6 +7,7 @@
 
 	let uniqueTechStackCategory:string[] = [...new Set(techstacks.map((tech) => tech.category))];
 	let email:string = $state("kahseng.chew@protonmail.com");
+	let toast: Toast; 
 
 	function copyToClipboard(text:string) {
 		navigator.clipboard.writeText(text);
@@ -21,7 +22,18 @@
 	<div>
 		<div class="flex justify-between">
 			<span>hello! i'm kahseng</span>
-			<Toast text={email} toastText="copied to clipboard" onclick={() => copyToClipboard(email)} />
+			<button 
+				class="relative cursor-pointer rounded px-2 transition text-[0.65rem] hover:bg-(--bg-1)"
+				onclick={() => {
+					copyToClipboard(email);
+					toast.showToast();
+				}}
+				>
+				<Toast 
+					text="copied to clipboard" 
+					bind:this={toast}/>
+				{email}
+			</button>
 		</div>
 		<p class="text-muted">mobile and full-stack web developer</p>
 	</div>
