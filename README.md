@@ -2,7 +2,7 @@
 
 > hello! this is my personal website repo
 
-<img alt="svelte" src="https://img.shields.io/badge/svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=fff"/> <img alt="typescript" src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=fff"/> <img alt="tailwindcss" src="https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=fff"/> <img alt="bun" src="https://img.shields.io/badge/bun-000?style=for-the-badge&logo=bun&logoColor=fff"/>
+<img alt="svelte" src="https://img.shields.io/badge/svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=fff"/> <img alt="typescript" src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=fff"/> <img alt="tailwindcss" src="https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=fff"/> <img alt="phosphoricons" src="https://img.shields.io/badge/phosphoricons-3C402B?style=for-the-badge&logo=phosphoricons&logoColor=fff"/> <img alt="bun" src="https://img.shields.io/badge/bun-000?style=for-the-badge&logo=bun&logoColor=fff"/>
 
 ## Install
 
