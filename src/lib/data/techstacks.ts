@@ -4,7 +4,7 @@ export type TechStack = {
 	iconURL?: string
 }
 
-export const techstack: TechStack[] = [
+export const techstacks: TechStack[] = [
 	{
 		name: "react",
 		category: "web dev"
