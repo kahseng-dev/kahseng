@@ -1,4 +1,10 @@
-export const projects = [
+export type Project = {
+    slug: string,
+    date_published: Date,
+    content: string
+}
+
+export const projects: Project[] = [
 	{
 		slug: "example-1",
 		date_published: new Date(2024, 11, 6),

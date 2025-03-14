@@ -1,4 +1,10 @@
-export const techstack = [
+export type TechStack = {
+    name: string,
+	category: string,
+	iconURL?: string
+}
+
+export const techstack: TechStack[] = [
 	{
 		name: "react",
 		category: "web dev"
