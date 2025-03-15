@@ -37,12 +37,9 @@
 		</div>
 		<p class="text-muted">mobile and full-stack web developer</p>
 	</div>
-	<p>
-		i'm a developer who works on both frontend and backend, i love focusing on user experience,
-		paying close attention to every detail, and creating beautiful and intuitive interfaces that
-		blend aesthetics with usability.<br/><br/>
-		here i'll be sharing some projects that i've worked on. always striving to create experiences that
-		are not just visually appealing but also highly functional.
+	<p class="lowercase">
+		As a full-stack developer, I specialize in both frontend and backend development, with a strong focus on user experience. I'm passionate about crafting interfaces that not only look beautiful but also provide intuitive and seamless interactions. I believe in paying close attention to every detail to ensure that every element serves both aesthetic appeal and functional value.<br/><br/>
+		In this space, I'll be showcasing some of the projects I've worked on, where I continuously strive to create experiences that are both visually captivating and highly functional.
 	</p>
 	<div class="flex flex-col gap-2">
 		<p class="text-muted">tech stack</p>
@@ -73,9 +70,7 @@
 		<hr/>
 		{#each projects as { slug, date_published }, index}
 			<a href="/projects/{slug}" class="flex justify-between">
-				<span class="flex items-center gap-2">
-					{slug}
-				</span>
+				<p class="hover:text-(--text-1) transition">{slug}</p>
 				<Time class="text-muted" date={date_published}/>
 			</a>
 			{#if index != projects.length - 1}
