@@ -15,3 +15,28 @@
     font-feature-settings: normal;
     font-variation-settings: normal;
 }
+
+.light {
+	--bg-0: oklch(92.8% 0.006 264.531);
+	--bg-1: oklab(0.882 -0.0161359 -0.0567506 / 0.8);
+	--text-0: oklch(48.17% 0.2054 261.34);
+	--text-1: oklch(44.37% 0.0237 260.13);
+	--border-0: oklch(48.17% 0.2054 261.34);
+}
+
+.dark {
+	--bg-0: oklch(17.76% 0 0);
+	--bg-1: oklch(28.5% 0 0);
+	--text-0: oklch(100% 0 0);
+	--text-1: oklch(53.82% 0 0);
+    --border-0: oklch(28.5% 0 0);
+}
+
+.text-muted {
+	color: var(--text-1);
+}
+
+hr {
+    border-color: var(--border-0);
+}
+

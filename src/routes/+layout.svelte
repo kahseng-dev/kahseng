@@ -1,12 +1,12 @@
 <script lang="ts">
+	import theme from "$lib/shared/stores/theme";
 	import "../app.css";
-	import "$lib/theme/dark.theme.css";
-	import Footer from '$components/Footer.svelte';
+	import Footer from "$components/Footer.svelte";
 
 	let { children } = $props();
 </script>
 
-<div class="grid grid-cols-4 py-30 bg-(--bg-0) text-(--text-0) md:text-sm">
+<div class="{$theme} transition grid grid-cols-4 py-30 bg-(--bg-0) text-(--text-0) md:text-sm">
 	<div class="min-h-screen col-start-2 col-span-2">
 		{@render children()}
 		<Footer/>
