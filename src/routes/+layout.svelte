@@ -6,7 +6,7 @@
 	let { children } = $props();
 </script>
 
-<div class="{$theme} transition grid grid-cols-4 py-30 bg-(--bg-0) text-(--text-0) md:text-sm">
+<div class="{$theme} transition grid py-10 px-5 bg-(--bg-0) text-(--text-0) text-xs md:text-sm md:grid-cols-4 md:px-0 md:py-30">
 	<div class="min-h-screen col-start-2 col-span-2">
 		{@render children()}
 		<Footer/>

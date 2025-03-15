@@ -20,10 +20,10 @@
 
 <div class="flex flex-col gap-8">
 	<div>
-		<div class="flex justify-between">
+		<div class="flex items-center justify-between">
 			<span>hello! i'm kahseng</span>
 			<button 
-				class="relative cursor-pointer rounded px-2 transition text-[0.65rem] hover:bg-(--bg-1)"
+				class="inline-flex items-center justify-center relative cursor-pointer rounded px-2 transition text-[0.65rem] hover:bg-(--bg-1)"
 				onclick={() => {
 					copyToClipboard(email);
 					toast.showToast();
@@ -32,7 +32,8 @@
 				<Toast 
 					text="copied to clipboard" 
 					bind:this={toast}/>
-				{email}
+				<span class="hidden md:flex">{email}</span>
+				<i class="md:hidden ph ph-envelope-simple text-lg bg-(--bg-1) rounded-full p-2"></i>
 			</button>
 		</div>
 		<p class="text-muted">mobile and full-stack web developer</p>

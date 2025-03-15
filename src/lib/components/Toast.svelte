@@ -19,7 +19,7 @@
 {#if isVisible}
     <div
         transition:fade
-        class="absolute bottom-6 left-6.5 text-[0.65rem] rounded px-2 py-0.5 bg-(--bg-1)">
+        class="absolute bottom-5 right-11 md:right-auto text-[0.65rem] rounded px-2 py-0.5 bg-(--bg-1)">
         {text}
     </div>
 {/if}

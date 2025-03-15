@@ -21,13 +21,21 @@
 	<p>{data?.content}</p>
 	<div class="mt-12 grid grid-cols-2 gap-2">
 		{#if projects[dataIndex - 1] != undefined}
-			<a target="_self" href="/projects/{projects[dataIndex - 1]?.slug}" class="flex flex-col border border-(--border-0) transition hover:bg-(--bg-1) rounded p-4">
+			<a 
+				target="_self" 
+				href="/projects/{projects[dataIndex - 1]?.slug}" 
+				class="flex flex-col border border-(--border-0) transition rounded py-3 px-4 md:p-4 hover:bg-(--bg-1)"
+				>
 				<span class="text-muted text-xs">last project</span>
 				<span>{projects[dataIndex - 1]?.slug}</span>
 			</a>
 		{/if}
 		{#if projects[dataIndex + 1] != undefined}
-			<a target="_self" href="/projects/{projects[dataIndex + 1]?.slug}" class="col-start-2 flex flex-col border border-(--border-0) transition hover:bg-(--bg-1) rounded p-4">
+			<a 
+				target="_self" 
+				href="/projects/{projects[dataIndex + 1]?.slug}" 
+				class="col-start-2 flex flex-col border border-(--border-0) transition rounded py-3 px-4 md:p-4 hover:bg-(--bg-1)"
+				>
 				<span class="text-muted text-xs">next project</span>
 				<span>{projects[dataIndex + 1]?.slug}</span>
 			</a>

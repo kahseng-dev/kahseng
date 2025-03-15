@@ -9,7 +9,7 @@
 </script>
 
 <div class="border-t border-(--border-0) my-8 py-2 flex justify-between gap-2">
-	<div class="flex gap-8">
+	<div class="flex gap-4 md:gap-8">
 		<a class="flex items-center gap-1 transition hover:text-(--text-1)" target="_blank" href="https://www.linkedin.com/in/kahseng">
 			<i class="ph ph-linkedin-logo"></i>
 			linkedin
