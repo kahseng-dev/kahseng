@@ -1,10 +1,10 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from "$app/state";
 	import { projects } from "$lib/data/projects";
 	import Breadcrumbs from "$components/Breadcrumbs.svelte";
 	import Time from "$components/Time.svelte";
 
-	let slug = $page.params.slug;
+	let slug = page.params.slug;
 	let data = $state(projects.find((project) => project.slug === slug));
 	let dataIndex = $state(projects.map((project) => project.slug).indexOf(slug));
 </script>
