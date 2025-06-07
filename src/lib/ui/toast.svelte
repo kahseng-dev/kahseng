@@ -33,7 +33,7 @@
     </button>
     <button
         onclick={handleShowToast}
-        class='flex md:hidden p-2 cursor-pointer rounded-full h-min bg-(--highlight)'>
+        class='flex md:hidden shadow-md p-2 cursor-pointer rounded-full h-min bg-(--highlight)'>
         <Icon />
     </button>
 </div>
