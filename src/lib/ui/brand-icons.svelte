@@ -23,7 +23,7 @@
     <button
         onmouseenter={handleMouseEnter}
         onmouseleave={handleMouseLeave}
-        class='border {styles.border} rounded transition duration-300 cursor-pointer hover:bg-white/20'>
+        class='border {styles.border} rounded transition duration-300 cursor-pointer {styles.hightlight}'>
         <img
             class='size-8 m-1'
             draggable='false'

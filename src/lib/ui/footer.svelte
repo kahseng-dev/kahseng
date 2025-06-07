@@ -18,20 +18,20 @@
             <a
                 href='https://www.linkedin.com/in/kahseng'
                 target='_blank'
-                class='flex gap-2 items-center {styles.text_muted} transition duration-300 hover:text-white'>
+                class='flex gap-2 items-center {styles.text_muted} transition duration-300 hover:text-(--text)'>
                 <IconBrandLinkedin class={styles.icon} />
                 <span>linkedin</span>
             </a>
             <a
                 href='https://github.com/kahseng-dev'
                 target='_blank'
-                class='flex gap-2 items-center {styles.text_muted} transition duration-300 hover:text-white'>
+                class='flex gap-2 items-center {styles.text_muted} transition duration-300 hover:text-(--text)'>
                 <IconBrandGithub class={styles.icon} />
                 <span>github</span>
             </a>
         </div>
         <div class='p-1 *:px-0.5 *:pb-0.5 flex flex-col md:flex-row gap-1 border {styles.border} rounded'>
-            <label class='rounded cursor-pointer transition duration-300 hover:bg-black/20 has-checked:bg-black/20'>
+            <label class='rounded cursor-pointer transition duration-300 {styles.hightlight} has-checked:bg-(--highlight)'>
                 <input
                     bind:group={theme}
                     value='dark'
@@ -39,7 +39,7 @@
                     class='hidden' />
                 <IconMoon class={styles.icon} />
             </label>
-            <label class='rounded cursor-pointer transition duration-300 hover:bg-black/20 has-checked:bg-black/20'>
+            <label class='rounded cursor-pointer transition duration-300 {styles.hightlight} has-checked:bg-(--highlight)'>
                 <input
                     bind:group={theme}
                     value='light'

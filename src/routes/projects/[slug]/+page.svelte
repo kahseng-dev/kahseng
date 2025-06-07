@@ -38,7 +38,7 @@
 			<a
 				target='_self'
 				href='/projects/{projects[index - 1].slug}'
-				class='p-4 border {styles.border} hover:bg-white/20 rounded cursor-pointer transition duration-300 ease-in-out'>
+				class='p-4 border {styles.border} {styles.hightlight} rounded cursor-pointer transition duration-300 ease-in-out'>
 				<p class='text-xs {styles.text_muted}'>last project</p>
 				<p>{projects[index - 1].slug}</p>
 			</a>
@@ -47,7 +47,7 @@
 			<a
 				target='_self'
 				href='/projects/{projects[index + 1].slug}'
-				class='col-start-2 p-4 border {styles.border} hover:bg-white/20 rounded cursor-pointer transition duration-300 ease-in-out'>
+				class='col-start-2 p-4 border {styles.border} {styles.hightlight} rounded cursor-pointer transition duration-300 ease-in-out'>
 				<p class='text-xs {styles.text_muted}'>next project</p>
 				<p>{projects[index + 1].slug}</p>
 			</a>

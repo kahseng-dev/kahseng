@@ -18,7 +18,7 @@
 		<div>
 			{#each projects as project}
 				<a
-					class='py-2 flex justify-between hover:bg-black/20 px-2'
+					class='py-2 flex justify-between {styles.hightlight} px-2'
 					href='./projects/{project.slug}'>
 					<span>{project.slug}</span>
 					<DateFormat date={project.date} className={styles.text_muted} />

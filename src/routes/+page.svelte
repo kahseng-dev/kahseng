@@ -80,7 +80,7 @@
         {#each projects as project}
             <a
                 href='/projects/{project.slug}'
-                class='p-2 flex justify-between cursor-pointer hover:bg-black/20'>
+                class='p-2 flex justify-between cursor-pointer {styles.hightlight}'>
                 <p>{project.slug}</p>
                 <DateFormat date={project.date} className={styles.text_muted} />
             </a>
