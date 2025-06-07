@@ -6,18 +6,18 @@ export type project = {
 
 export const projects: project[] = [
 	{
-		slug: 'example-1',
-		date: '2024-11-6',
+		slug: 'aether notes',
+		date: '2025-06-04',
 		content: 'placeholder 1',
 	},
 	{
-		slug: 'example-2',
-		date: '2024-11-6',
+		slug: 'currency converter',
+		date: '2025-05-12',
 		content: 'placeholder 2',
 	},
 	{
-		slug: 'example-3',
-		date: '2024-11-6',
+		slug: 'discord bot',
+		date: '2025-02-06',
 		content: 'placeholder 3',
 	},
 ]
