@@ -6,17 +6,17 @@ export type project = {
 
 export const projects: project[] = [
 	{
-		slug: 'aether notes',
+		slug: 'aether-notes',
 		date: '2025-06-04',
 		content: 'placeholder 1',
 	},
 	{
-		slug: 'currency converter',
+		slug: 'currency-converter',
 		date: '2025-05-12',
 		content: 'placeholder 2',
 	},
 	{
-		slug: 'discord bot',
+		slug: 'discord-bot',
 		date: '2025-02-06',
 		content: 'placeholder 3',
 	},
