@@ -1,23 +1,23 @@
-export type Project = {
+export type project = {
     slug: string,
-    date_published: Date,
+    date: string,
     content: string
 }
 
-export const projects: Project[] = [
+export const projects: project[] = [
 	{
-		slug: "example-1",
-		date_published: new Date(2024, 11, 6),
-		content: "placeholder 1"
+		slug: 'example-1',
+		date: '2024-11-6',
+		content: 'placeholder 1',
 	},
 	{
-		slug: "example-2",
-		date_published: new Date(2024, 11, 6),
-		content: "placeholder 2"
+		slug: 'example-2',
+		date: '2024-11-6',
+		content: 'placeholder 2',
 	},
 	{
-		slug: "example-3",
-		date_published: new Date(2024, 11, 6),
-		content: "placeholder 3"
-	}
+		slug: 'example-3',
+		date: '2024-11-6',
+		content: 'placeholder 3',
+	},
 ]
