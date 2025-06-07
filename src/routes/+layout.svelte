@@ -1,14 +1,16 @@
-<script lang="ts">
-	import theme from "$lib/shared/stores/theme";
-	import "../app.css";
-	import Footer from "$components/Footer.svelte";
+<script lang='ts'>
+    import '../app.css';
 
-	let { children } = $props();
+    import Footer from '$lib/ui/footer.svelte';
+    
+    const { children } = $props();
+    
+    let theme: string = $state('dark');
 </script>
 
-<div class="{$theme} transition grid py-10 px-5 bg-(--bg-0) text-(--text-0) text-xs md:text-sm md:grid-cols-4 md:px-0 md:py-30">
-	<div class="min-h-screen col-start-2 col-span-2">
-		{@render children()}
-		<Footer/>
-	</div>
+<div class='{theme} min-h-screen antialiased font-mono px-4 py-12 md:py-24 text-xs md:text-base grid grid-cols-5 transition duration-300 bg-(--bg) text-(--text)'>
+    <div class='col-start-2 col-span-3'>
+        {@render children()}
+        <Footer bind:theme={theme} />
+    </div>
 </div>
