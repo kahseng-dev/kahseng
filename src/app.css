@@ -1,42 +1,27 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@font-face {
-    font-family: "Geist Mono", serif;
-    src: url("/fonts/GeistMono.woff2");
+.font-sans {
+  font-family: 'Geist', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-:root {
-    --font-mono: "Geist Mono", serif;
-}
-
-* {
-	font-family: var(--font-mono), ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-	text-rendering: optimizeLegibility;
-    font-feature-settings: normal;
-    font-variation-settings: normal;
-}
-
-.light {
-	--bg-0: oklch(92.8% 0.006 264.531);
-	--bg-1: oklab(0.882 -0.0161359 -0.0567506 / 0.8);
-	--text-0: oklch(48.17% 0.2054 261.34);
-	--text-1: oklch(44.37% 0.0237 260.13);
-	--border-0: oklch(48.17% 0.2054 261.34);
+.font-mono {
+  font-family: 'Geist Mono', monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .dark {
-	--bg-0: oklch(17.76% 0 0);
-	--bg-1: oklch(28.5% 0 0);
-	--text-0: oklch(100% 0 0);
-	--text-1: oklch(53.82% 0 0);
-    --border-0: oklch(28.5% 0 0);
+	--bg: oklch(17.76% 0 0);
+	--text: oklch(100% 0 0);
+  --text-mute: oklch(53.82% 0 0);
+  --border: oklch(28.5% 0 0);
 }
 
-.text-muted {
-	color: var(--text-1);
+.light {
+	--bg: oklch(92.8% 0.006 264.531);
+	--text: oklch(48.17% 0.2054 261.34);
+  --text-mute: oklch(44.37% 0.0237 260.13);
+	--border: oklch(48.17% 0.2054 261.34);
 }
-
-hr {
-    border-color: var(--border-0);
-}
-
