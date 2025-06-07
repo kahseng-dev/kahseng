@@ -1,43 +1,55 @@
-<script>
-	import { page } from "$app/state";
-	import { projects } from "$lib/data/projects";
-	import Breadcrumbs from "$components/Breadcrumbs.svelte";
-	import Time from "$components/Time.svelte";
+<script lang='ts'>
+	import { page } from '$app/state';
+	import { error } from '@sveltejs/kit';
+	import { projects } from '$lib/data/projects';
+	import { styles } from '$lib/constants';
 
-	let slug = page.params.slug;
-	let data = $state(projects.find((project) => project.slug === slug));
-	let dataIndex = $state(projects.map((project) => project.slug).indexOf(slug));
+	import Breadcrumbs from '$lib/ui/breadcrumbs.svelte';
+	import DateFormat from '$lib/ui/date-format.svelte';
+
+	let slug = $state(page.params.slug);
+	let project = $state(projects.find(project => project.slug === slug));
+
+	if (!project) {
+		error(404, 'Not found');
+	}
+	
+	let index = $derived(projects.map(project => project.slug).indexOf(slug));
 </script>
 
-<div class="flex flex-col gap-4">
-	<Breadcrumbs/>
-	<div class="flex flex-col">
-		{slug}
-		<span class="text-muted">
-			Published on
-			<Time date={data?.date_published}/>
-		</span>
+<svelte:head>
+	<title>{slug}</title>
+</svelte:head>
+
+<div class='flex flex-col gap-4'>
+	<Breadcrumbs />
+	<div>
+		<p>{slug}</p>
+		<p class={styles.text_muted} >
+			<span>Published on </span>
+			<DateFormat date={project.date} />
+		</p>
 	</div>
-	<p>{data?.content}</p>
-	<div class="mt-12 grid grid-cols-2 gap-2">
-		{#if projects[dataIndex - 1] != undefined}
-			<a 
-				target="_self" 
-				href="/projects/{projects[dataIndex - 1]?.slug}" 
-				class="flex flex-col border border-(--border-0) transition rounded py-3 px-4 md:p-4 hover:bg-(--bg-1)"
-				>
-				<span class="text-muted text-xs">last project</span>
-				<span>{projects[dataIndex - 1]?.slug}</span>
+	<div>
+		<p class='text-sm'>{project.content}</p>
+	</div>
+	<div class='mt-24 flex flex-col md:grid md:grid-cols-2 gap-4'>
+		{#if projects[index - 1]}
+			<a
+				target='_self'
+				href='/projects/{projects[index - 1].slug}'
+				class='p-4 border {styles.border} hover:bg-white/20 rounded cursor-pointer transition duration-300 ease-in-out'>
+				<p class='text-xs {styles.text_muted}'>last project</p>
+				<p>{projects[index - 1].slug}</p>
 			</a>
 		{/if}
-		{#if projects[dataIndex + 1] != undefined}
-			<a 
-				target="_self" 
-				href="/projects/{projects[dataIndex + 1]?.slug}" 
-				class="col-start-2 flex flex-col border border-(--border-0) transition rounded py-3 px-4 md:p-4 hover:bg-(--bg-1)"
-				>
-				<span class="text-muted text-xs">next project</span>
-				<span>{projects[dataIndex + 1]?.slug}</span>
+		{#if projects[index + 1]}
+			<a
+				target='_self'
+				href='/projects/{projects[index + 1].slug}'
+				class='col-start-2 p-4 border {styles.border} hover:bg-white/20 rounded cursor-pointer transition duration-300 ease-in-out'>
+				<p class='text-xs {styles.text_muted}'>next project</p>
+				<p>{projects[index + 1].slug}</p>
 			</a>
 		{/if}
 	</div>
