@@ -39,16 +39,17 @@
     </div>
     <div>
         <p>
-            As a full-stack developer, I specialize in both frontend and 
-            backend development, with a strong focus on user experience. 
-            I'm passionate about crafting interfaces that not only look 
-            beautiful but also provide intuitive and seamless interactions. 
-            I believe in paying close attention to every detail to ensure 
-            that every element serves both aesthetic appeal and functional 
-            value.
-            <br/><br/>In this space, I'll be showcasing some of the projects 
-            I've worked on, where I continuously strive to create experiences 
-            that are both visually captivating and highly functional.
+            I specialize in front and backend development with a strong 
+            focus on user experience. I'm passionate about 
+            crafting interfaces that look beautiful and provide 
+            intuitive and seamless interactions. I believe in paying 
+            close attention to every detail to ensure that every element 
+            serves both aesthetic appeal and functional value.
+            <br/><br/>
+            In this space, I'll showcase some of the projects that 
+            I've worked on personally. I continuously strive to create 
+            experiences that are both visually captivating and highly 
+            functional.
         </p>
     </div>
     <div>
