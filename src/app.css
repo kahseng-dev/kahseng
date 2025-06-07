@@ -12,18 +12,18 @@
   font-style: normal;
 }
 
+:root {
+	--bg: oklch(92.8% 0.006 264.531);
+  --highlight: oklab(0.882 -0.0161359 -0.0567506 / 0.8);
+	--text: oklch(48.17% 0.2054 261.34);
+  --text-mute: oklch(44.37% 0.0237 260.13);
+	--border: oklch(48.17% 0.2054 261.34);
+}
+
 .dark {
 	--bg: oklch(17.76% 0 0);
   --highlight: oklch(28.5% 0 0);
 	--text: oklch(100% 0 0);
   --text-mute: oklch(53.82% 0 0);
   --border: oklch(28.5% 0 0);
-}
-
-.light {
-	--bg: oklch(92.8% 0.006 264.531);
-  --highlight: oklab(0.882 -0.0161359 -0.0567506 / 0.8);
-	--text: oklch(48.17% 0.2054 261.34);
-  --text-mute: oklch(44.37% 0.0237 260.13);
-	--border: oklch(48.17% 0.2054 261.34);
 }

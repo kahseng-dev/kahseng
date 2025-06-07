@@ -9,6 +9,22 @@
     } from '@tabler/icons-svelte';
 
     let { theme = $bindable() } = $props();
+
+    const handleThemeChange = (e: Event) => {
+        const target = e.target as HTMLInputElement;
+
+        if (!target) {
+            return
+        }
+
+        localStorage.setItem('theme', target.value);
+
+        if (theme != 'dark') {
+            return document.documentElement.classList.remove('dark');
+        }
+
+        return document.documentElement.classList.add('dark');
+    }
 </script>
 
 <div class='mt-12 text-xs md:text-sm'>
@@ -33,6 +49,7 @@
         <div class='p-1 *:px-0.5 *:pb-0.5 flex flex-col md:flex-row gap-1 border {styles.border} rounded'>
             <label class='rounded cursor-pointer transition duration-300 {styles.hightlight} has-checked:bg-(--highlight)'>
                 <input
+                    onchange={handleThemeChange}
                     bind:group={theme}
                     value='dark'
                     type='radio'
@@ -41,6 +58,7 @@
             </label>
             <label class='rounded cursor-pointer transition duration-300 {styles.hightlight} has-checked:bg-(--highlight)'>
                 <input
+                    onchange={handleThemeChange}
                     bind:group={theme}
                     value='light'
                     type='radio'
