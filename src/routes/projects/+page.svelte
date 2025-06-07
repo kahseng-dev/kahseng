@@ -1,26 +1,30 @@
 <script lang="ts">
-	import { projects } from "$lib/data/projects";
-	import Breadcrumbs from "$components/Breadcrumbs.svelte";
-	import Time from "$components/Time.svelte";
+	import { projects } from '$lib/data/projects';
+	import { styles } from '$lib/constants';
+
+	import Breadcrumbs from '$lib/ui/breadcrumbs.svelte';
+	import DateFormat from '$lib/ui/date-format.svelte';
 </script>
 
 <svelte:head>
 	<title>projects</title>
 </svelte:head>
 
-<div class="flex flex-col gap-4">
-	<Breadcrumbs/>
-	<div class="flex flex-col gap-2">
-		<p class="text-muted">projects</p>
-		<hr/>
-		{#each projects as project, index}
-			<div class="flex justify-between">
-				<a href="/projects/{project.slug}">{project.slug}</a>
-				<Time class="text-muted" date={project.date_published}/>
-			</div>
-			{#if index != projects.length - 1}
-				<hr/>
-			{/if}
-		{/each}
+<div>
+	<Breadcrumbs />
+	<div class='mt-4'>
+		<p>projects <span class='{styles.text_muted}'>({projects.length})</span></p>
+		<hr class='mt-4 {styles.border}' />
+		<div>
+			{#each projects as project}
+				<a
+					class='py-2 flex justify-between hover:bg-black/20 px-2'
+					href='./projects/{project.slug}'>
+					<span>{project.slug}</span>
+					<DateFormat date={project.date} className={styles.text_muted} />
+				</a>
+				<hr class={styles.border} />
+			{/each}
+		</div>
 	</div>
 </div>
