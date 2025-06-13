@@ -7,7 +7,7 @@
         getSkillsByArea,
     } from '$lib/data/skills';
 
-    import { IconArrowRight, IconMail } from '@tabler/icons-svelte';
+    import { IconArrowRight, IconMail, IconExternalLink } from '@tabler/icons-svelte';
 
     import Toast from '$lib/ui/toast.svelte';
     import BrandIcons from '$lib/ui/brand-icons.svelte';
@@ -47,7 +47,7 @@
             serves both aesthetic appeal and functional value.
             <br/><br/>
             In this space, I'll showcase some of the projects that 
-            I've worked on personally. I continuously strive to create 
+            I've worked on it personally. I continuously strive to create 
             experiences that are both visually captivating and highly 
             functional.
         </p>
@@ -80,9 +80,15 @@
         <hr class={styles.border} />
         {#each projects as project}
             <a
-                href='/projects/{project.slug}'
+                href={project.content === '' ? `${project.link}` : `/projects/${project.slug}`}
+                target={project.content === '' ? '_blank' : '_self'}
                 class='p-2 flex justify-between cursor-pointer {styles.hightlight}'>
-                <p>{project.slug}</p>
+                <div class='flex items-center gap-2'>
+                    <p>{project.slug}</p>
+                    {#if project.content === ''}
+                        <IconExternalLink class={styles.icon} />
+                    {/if}
+                </div>
                 <DateFormat date={project.date} className={styles.text_muted} />
             </a>
             <hr class={styles.border} />
