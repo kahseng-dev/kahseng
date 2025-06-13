@@ -21,7 +21,7 @@
     }
 </script>
 
-<div class='min-h-screen antialiased font-mono px-4 py-12 md:py-24 text-xs flex md:text-base md:grid md:grid-cols-5 transition ease-in-out duration-300 bg-(--bg) text-(--text)'>
+<div class='min-h-screen antialiased font-mono px-4 py-12 md:py-24 text-xs flex md:text-base md:grid md:grid-cols-5 text-(--text)'>
     <div class='md:col-start-2 md:col-span-3'>
         {@render children()}
         <Footer bind:theme={theme} />
