@@ -34,7 +34,7 @@
 		<p class='text-sm'>{project.content}</p>
 	</div>
 	<div class='mt-24 flex flex-col md:grid md:grid-cols-2 gap-4'>
-		{#if projects[index - 1]}
+		{#if projects[index - 1] && projects[index - 1].content != ''}
 			<a
 				target='_self'
 				href='/projects/{projects[index - 1].slug}'
@@ -43,7 +43,7 @@
 				<p>{projects[index - 1].slug}</p>
 			</a>
 		{/if}
-		{#if projects[index + 1]}
+		{#if projects[index + 1] && projects[index - 1].content != ''}
 			<a
 				target='_self'
 				href='/projects/{projects[index + 1].slug}'
