@@ -38,7 +38,7 @@
             Icon={IconMail} />
     </div>
     <div>
-        <p>
+        <p class='text-balance'>
             I specialize in front and backend development with a strong 
             focus on user experience. I'm passionate about 
             crafting interfaces that look beautiful and provide 

@@ -29,8 +29,8 @@
 
 <div class='mt-12 text-xs md:text-sm'>
     <hr class={styles.border} />
-    <div class='mt-1 flex justify-between'>
-        <div class='flex flex-col md:flex-row md:gap-8'>
+    <div class='mt-2 flex justify-between items-center'>
+        <div class='flex flex-col gap-1 md:flex-row md:gap-8'>
             <a
                 href='https://www.linkedin.com/in/kahseng'
                 target='_blank'
@@ -46,7 +46,7 @@
                 <span>github</span>
             </a>
         </div>
-        <div class='p-1 *:px-0.5 *:pb-0.5 flex flex-col md:flex-row gap-1 border {styles.border} rounded'>
+        <div class='p-1 *:px-0.5 *:pb-0.5 flex gap-1 border {styles.border} rounded'>
             <label class='rounded cursor-pointer transition duration-300 {styles.hightlight} has-checked:bg-(--highlight)'>
                 <input
                     onchange={handleThemeChange}
